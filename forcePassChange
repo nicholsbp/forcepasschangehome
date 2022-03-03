@@ -1,0 +1,5 @@
+$user = 'user_account'
+wmic UserAccount where name=$user set Passwordexpires=true
+net user $user /logonpasswordchg:yes
+net accounts /maxpwage:999
+pause
